@@ -1,0 +1,23 @@
+{
+  "name": "basic-server",
+  "version": "0.0.1",
+  "description": "Server with http",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node --trace-warnings --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristina-bosa/backend-uem.git"
+  },
+  "keywords": [
+    "backend",
+    "node"
+  ],
+  "author": "CristinaBs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristina-bosa/backend-uem/issues"
+  },
+  "homepage": "https://github.com/cristina-bosa/backend-uem#readme"
+}
