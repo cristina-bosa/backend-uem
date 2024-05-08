@@ -1,0 +1,27 @@
+.idea/
+.vscode/
+
+*.exe
+*.dll
+*.so
+
+
+/bin/
+/build/
+/dist/
+
+
+**/node_modules/
+/vendor/
+**.env
+**package-lock.json
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.bak
+*//.
+# Ignore sensitive or personal files
+config.ini
+secrets.txt
