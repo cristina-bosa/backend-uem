@@ -12,6 +12,10 @@ const animeSchema = new mongoose.Schema({
   duration: String,
   season: String,
   year: Number,
+  favorite: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 export default mongoose.model("Anime", animeSchema);

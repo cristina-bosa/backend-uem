@@ -25,6 +25,7 @@ export const createMasive = async (req, res) => {
         duration: anime.duration,
         season: anime.season,
         year: anime.year,
+        favorite: false,
       });
 
       await newAnime.save();
@@ -81,3 +82,83 @@ export const getById = async (req, res) => {
     console.log(chalk.red("❌ Error fetching data!"), error);
   }
 };
+
+export const addFavorite = async (req, res) => {
+  try {
+
+    const { mal_id } = req.params;
+
+    const anime = await Anime.findOneAndUpdate({ mal_id: mal_id },{favorite: true}).exec();
+        res.status(200).json({
+          data: anime,
+          message: "Data updated successfully"
+        });     
+
+  }catch(error){
+    res.status(500).json({
+      message: "Error updating data",
+    })
+    console.log(chalk.red("❌ Error updating data"), error);
+  }
+}
+
+export const removeFavorite = async (req, res) => {
+  try {
+
+    const { mal_id } = req.params;
+
+    const anime = await Anime.findOneAndUpdate({ mal_id: mal_id }, {favorite: false}).exec();
+
+      res.status(200).json({
+        data: anime,
+        message: "Data updated successfully"
+      });     
+
+  }catch(error){
+    res.status(500).json({
+      message: "Error updating data",
+    })
+    console.log(chalk.red("❌ Error updating data"), error);
+  }
+}
+
+export const getAllFavorites = async (req, res) => {
+  try{
+    const animes = await Anime.find({favorite: true}).exec();
+    
+    if(animes.length > 0){
+      res.status(200).json(animes);
+    }else{
+        res.status(204).json({
+        message: "Data not found",
+      });
+    }
+  }catch(error){
+    res.status(500).json({
+      message: "Error fetching data",
+    })
+    console.log(chalk.red("❌ Error fetching data"), error);
+  }
+
+}
+export const removeById = async (req, res) => {
+  try{
+    const {mal_id} = req.params;
+    const anime = await Anime.find({mal_id: mal_id}).exec();
+    if(anime !== null){
+      await anime.remove()
+      res.status(200).json({
+        message: "Data removed successfully"
+      });
+    }else{
+    res.status(204).json({
+      message: "Data not found",
+   });
+  }
+  }catch(error){
+    res.status(500).json({
+      message: "Error removing data",
+    })
+    console.log(chalk.red("❌ Error removing data"), error);
+  }
+}
