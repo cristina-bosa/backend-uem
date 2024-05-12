@@ -31,7 +31,7 @@ Esta API proporciona las siguientes funcionalidades
 - Consultar información de un anime
 - Añadir a favoritos un anime
 - Borrar de favoritos un anime
-- Modificar un anime
+- Borrar un anime de la base de datos
 
 ## API Reference
 
