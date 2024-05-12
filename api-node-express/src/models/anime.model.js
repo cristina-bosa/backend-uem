@@ -6,6 +6,7 @@ const animeSchema = new mongoose.Schema({
   title: String,
   title_english: String,
   title_japanese: String,
+  url_image: String,
   synopsis: String,
   background: String,
   episodes: Number,

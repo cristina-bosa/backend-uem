@@ -19,6 +19,7 @@ export const createMasive = async (req, res) => {
         title: anime.title,
         title_english: anime.title_english,
         title_japanese: anime.title_japanese,
+        url_image: anime.images.jpg.image_url,
         synopsis: anime.synopsis,
         background: anime.background,
         episodes: anime.episodes,
@@ -144,17 +145,16 @@ export const getAllFavorites = async (req, res) => {
 export const removeById = async (req, res) => {
   try{
     const {mal_id} = req.params;
-    const anime = await Anime.find({mal_id: mal_id}).exec();
-    if(anime !== null){
-      await anime.remove()
+    const isDeleted = await Anime.deleteOne({mal_id: mal_id}).exec();
+    if(isDeleted.deletedCount > 0){
       res.status(200).json({
         message: "Data removed successfully"
       });
     }else{
     res.status(204).json({
       message: "Data not found",
-   });
-  }
+    });
+    }
   }catch(error){
     res.status(500).json({
       message: "Error removing data",
