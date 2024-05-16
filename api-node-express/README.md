@@ -22,6 +22,7 @@ Para levantar este proyecto, será necesario añadir la siguientes variables de 
 https://api.jikan.moe/v4/
 
 `DATABASE`: Connection string generado a partir de la instancia de MongoDB a utilizar
+
 `PORT`: Puerto para poder levantar el servidor.
 
 ## Features
