@@ -21,6 +21,7 @@ Para levantar este proyecto, será necesario añadir la siguientes variables de 
 https://api.jikan.moe/v4/
 
 `DATABASE`: Connection string generado a partir de la instancia de MongoDB a utilizar
+`PORT`: Puerto para poder levantar el servidor.
 
 ## Features
 
@@ -121,10 +122,9 @@ Esta API proporciona las siguientes funcionalidades
 | Parameter | Type | Description |
 | :-------- | :--- | :---------- |
 
-
 | Status | Description                                                                |
 | :----- | :------------------------------------------------------------------------- |
-| 200    | La entidad ha sido encontrado y se ha realizado la operación correctamente |
+| 200    | La entidad ha sido encontrada y se ha realizado la operación correctamente |
 | 204    | No se ha encontrado la entidad en el sistema                               |
 | 500    | Se ha producido un error en el servidor durante el procesado               |
 

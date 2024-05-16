@@ -28,20 +28,18 @@ export const createMasive = async (req, res) => {
         year: anime.year,
         favorite: false,
       });
-
       await newAnime.save();
     }
 
-    res.status(200).json({
+    console.log(chalk.green("🌟 Data fetched successfully!"));
+    return res.status(200).json({
       message: "Data saved successfully!",
     });
-
-    console.log(chalk.green("🌟 Data fetched successfully!"));
   } catch (error) {
-    res.status(500).json({
+    console.log(chalk.red("❌ Error fetching data!"), error);
+    return res.status(500).json({
       message: "Error fetching data!",
     });
-    console.log(chalk.red("❌ Error fetching data!"), error);
   }
 };
 
@@ -49,17 +47,17 @@ export const getAll = async (req, res) => {
   try {
     const animes = await Anime.find().exec();
     if (animes.length > 0) {
-      res.status(200).json(animes);
+      return res.status(200).json(animes);
     } else {
-      res.status(204).json({
+      return res.status(204).json({
         message: "Data not found!",
       });
     }
   } catch (error) {
-    res.status(500).json({
+    console.log(chalk.red("❌ Error fetching data!"), error);
+    return res.status(500).json({
       message: "Error fetching data!",
     });
-    console.log(chalk.red("❌ Error fetching data!"), error);
   }
 };
 
@@ -70,95 +68,96 @@ export const getById = async (req, res) => {
     const anime = await Anime.find({ mal_id: mal_id }).exec();
 
     if (anime !== null) {
-      res.status(200).json(anime);
+      return res.status(200).json(anime);
     } else {
-      res.status(204).json({
+      return res.status(204).json({
         message: "Data not found!",
       });
     }
   } catch (error) {
+    console.log(chalk.red("❌ Error fetching data!"), error);
     res.status(500).json({
       message: "Error fetching data!",
     });
-    console.log(chalk.red("❌ Error fetching data!"), error);
   }
 };
 
 export const addFavorite = async (req, res) => {
   try {
-
     const { mal_id } = req.params;
 
-    const anime = await Anime.findOneAndUpdate({ mal_id: mal_id },{favorite: true}).exec();
-        res.status(200).json({
-          data: anime,
-          message: "Data updated successfully"
-        });     
-
-  }catch(error){
-    res.status(500).json({
-      message: "Error updating data",
-    })
+    const anime = await Anime.findOneAndUpdate(
+      { mal_id: mal_id },
+      { favorite: true }
+    ).exec();
+    return res.status(200).json({
+      data: anime,
+      message: "Data updated successfully",
+    });
+  } catch (error) {
     console.log(chalk.red("❌ Error updating data"), error);
+    return res.status(500).json({
+      message: "Error updating data",
+    });
   }
-}
+};
 
 export const removeFavorite = async (req, res) => {
   try {
-
     const { mal_id } = req.params;
 
-    const anime = await Anime.findOneAndUpdate({ mal_id: mal_id }, {favorite: false}).exec();
+    const anime = await Anime.findOneAndUpdate(
+      { mal_id: mal_id },
+      { favorite: false }
+    ).exec();
 
-      res.status(200).json({
-        data: anime,
-        message: "Data updated successfully"
-      });     
-
-  }catch(error){
-    res.status(500).json({
-      message: "Error updating data",
-    })
+    return res.status(200).json({
+      data: anime,
+      message: "Data updated successfully",
+    });
+  } catch (error) {
     console.log(chalk.red("❌ Error updating data"), error);
+    return res.status(500).json({
+      message: "Error updating data",
+    });
   }
-}
+};
 
 export const getAllFavorites = async (req, res) => {
-  try{
-    const animes = await Anime.find({favorite: true}).exec();
-    
-    if(animes.length > 0){
-      res.status(200).json(animes);
-    }else{
-        res.status(204).json({
+  try {
+    const animes = await Anime.find({ favorite: true }).exec();
+    if (animes.length > 0) {
+      return res.status(200).json(animes);
+    } else {
+      return res.status(204).json({
         message: "Data not found",
       });
     }
-  }catch(error){
-    res.status(500).json({
-      message: "Error fetching data",
-    })
+  } catch (error) {
     console.log(chalk.red("❌ Error fetching data"), error);
-  }
-
-}
-export const removeById = async (req, res) => {
-  try{
-    const {mal_id} = req.params;
-    const isDeleted = await Anime.deleteOne({mal_id: mal_id}).exec();
-    if(isDeleted.deletedCount > 0){
-      res.status(200).json({
-        message: "Data removed successfully"
-      });
-    }else{
-    res.status(204).json({
-      message: "Data not found",
+    return res.status(500).json({
+      message: "Error fetching data",
     });
-    }
-  }catch(error){
-    res.status(500).json({
-      message: "Error removing data",
-    })
-    console.log(chalk.red("❌ Error removing data"), error);
   }
-}
+};
+
+export const removeById = async (req, res) => {
+  try {
+    const { mal_id } = req.params;
+    const isDeleted = await Anime.deleteOne({ mal_id: mal_id }).exec();
+    if (isDeleted.deletedCount > 0) {
+      return res.status(200).json({
+        message: "Data removed successfully",
+      });
+    } else {
+      return res.status(204).json({
+        message: "Data not found",
+      });
+    }
+  } catch (error) {
+    console.log(chalk.red("❌ Error removing data"), error);
+    return res.status(500).json({
+      message: "Error removing data",
+    });
+  }
+};
