@@ -10,6 +10,7 @@ Para desplegar este proyecto en local es necesario realizar los siguientes pasos
   git clone https://github.com/cristina-bosa/backend-uem/tree/main
   cd api-node-express
   npm i
+  crear el fichero .env con las variables mencionadas
   npm run watch
 ```
 
