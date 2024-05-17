@@ -10,13 +10,12 @@ Para desplegar este proyecto en local es necesario realizar los siguientes pasos
   git clone https://github.com/cristina-bosa/backend-uem
   cd api-node-express
   npm i
-  crear el fichero .env con las variables mencionadas
   npm run watch
 ```
 
 ## Environment Variables
 
-Para levantar este proyecto, será necesario añadir la siguientes variables de entorno en el .env
+Se ha añadido un .env.example con las variables de entorno seteadas a demo, menos la de API_ANIME, esa está tal cual se menciona más adelante. Recuerda que, para poder levantar el proyecto, será necesario cambiar el .env.example por .env y rellenar las variables.
 
 `API_ANIME`: URL asociado a la API externa utilizada para la recopilación de datos. Para esta ocasión se ha usado
 https://api.jikan.moe/v4/anime
