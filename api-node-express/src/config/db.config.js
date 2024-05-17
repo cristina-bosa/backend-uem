@@ -4,11 +4,11 @@ import chalk from "chalk";
 
 dotenv.config();
 
-const URI = process.env.DATABASE
+const URI = process.env.DATABASE;
 
 mongoose
   .connect(URI)
   .then(() => {
-    console.log(chalk.bgBlueBright("📃 Database connected successfully!"))
+    console.log(chalk.bgBlueBright("📃 Database connected successfully!"));
   })
-  .catch((err) => console.log(error));
+  .catch((error) => console.log(error));

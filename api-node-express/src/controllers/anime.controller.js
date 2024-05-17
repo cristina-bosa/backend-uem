@@ -49,7 +49,7 @@ export const getAll = async (req, res) => {
     if (animes.length > 0) {
       return res.status(200).json(animes);
     } else {
-      return res.status(204).json({
+      return res.status(404).json({
         message: "Data not found!",
       });
     }
@@ -67,10 +67,10 @@ export const getById = async (req, res) => {
 
     const anime = await Anime.find({ mal_id: mal_id }).exec();
 
-    if (anime !== null) {
+    if (anime.length > 0) {
       return res.status(200).json(anime);
     } else {
-      return res.status(204).json({
+      return res.status(404).json({
         message: "Data not found!",
       });
     }
@@ -129,7 +129,7 @@ export const getAllFavorites = async (req, res) => {
     if (animes.length > 0) {
       return res.status(200).json(animes);
     } else {
-      return res.status(204).json({
+      return res.status(404).json({
         message: "Data not found",
       });
     }
@@ -150,7 +150,7 @@ export const removeById = async (req, res) => {
         message: "Data removed successfully",
       });
     } else {
-      return res.status(204).json({
+      return res.status(404).json({
         message: "Data not found",
       });
     }
