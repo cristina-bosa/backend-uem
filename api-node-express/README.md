@@ -152,4 +152,4 @@ Esta API proporciona las siguientes funcionalidades
 
 ## Demo
 
-![alt][demo]
+![alt][demo.gif]
