@@ -152,4 +152,4 @@ Esta API proporciona las siguientes funcionalidades
 
 ## Demo
 
-!(https://github.com/cristina-bosa/backend-uem/blob/main/api-node-express/demo.gif)
+![Demo](https://github.com/cristina-bosa/backend-uem/blob/main/api-node-express/demo.gif)
