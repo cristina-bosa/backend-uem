@@ -18,6 +18,12 @@ Se ha creado una API básica para la segunda actividad. En este caso, es una API
 
 ## Basic server django
 
+Se ha creado una API básica de mitología bajo el framework de django.
+
+## Completed server django
+
+...
+
 ## Final project
 
-Gestión de proyectos y tareas
+...
