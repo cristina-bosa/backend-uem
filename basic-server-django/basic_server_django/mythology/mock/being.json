@@ -1,0 +1,140 @@
+[
+    {
+        "id": 1,
+        "name": "Afrodita",
+        "type_id": 1,
+        "story_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Hades",
+        "type_id": 1,
+        "story_id": 2
+    },
+    {
+        "id": 3,
+        "name": "Artemisa",
+        "type_id": 1,
+        "story_id": 3
+    },
+    {
+        "id": 4,
+        "name": "Crono",
+        "type_id": 1,
+        "story_id": 4
+    },
+    {
+        "id": 5,
+        "name": "Demeter",
+        "type_id": 1,
+        "story_id": 5
+    },
+    {
+        "id": 6,
+        "name": "Zeus",
+        "type_id": 1,
+        "story_id": 6
+    },
+    {
+        "id": 7,
+        "name": "Adonis",
+        "house_id": 1,
+        "type_id": 1,
+        "story_id": 7
+    },
+    {
+        "id": 8,
+        "name": "Andromeda",
+        "house_id": 1,
+        "type_id": 4,
+        "story_id": 8
+    },
+    {
+        "id": 9,
+        "name": "Aquiles",
+        "house_id": 1,
+        "type_id": 4,
+        "story_id": 9
+    },
+    {
+        "id": 10,
+        "name": "Dafne",
+        "house_id": 4,
+        "type_id": 4,
+        "story_id": 10
+    },
+    {
+        "id": 11,
+        "name": "Hercules",
+        "house_id": 4,
+        "type_id": 4,
+        "story_id": 11
+    },
+    {
+        "id": 12,
+        "name": "Electra",
+        "house_id": 4,
+        "type_id": 4,
+        "story_id": 12
+    },
+    {
+        "id": 13,
+        "name": "Icaro",
+        "house_id": 2,
+        "type_id": 4,
+        "story_id": 13
+    },
+    {
+        "id": 14,
+        "name": "Edipo",
+        "house_id": 2,
+        "type_id": 4,
+        "story_id": 14
+    },
+    {
+        "id": 15,
+        "name": "Odiseo",
+        "house_id": 3,
+        "type_id": 4,
+        "story_id": 15
+    },
+    {
+        "id": 16,
+        "name": "Orestes",
+        "house_id": 3,
+        "type_id": 4,
+        "story_id": 16
+    },
+    {
+        "id": 17,
+        "name": "Perseo",
+        "house_id": 3,
+        "type_id": 4,
+        "story_id": 17
+    },
+    {
+        "id": 18,
+        "name": "Tantalo",
+        "house_id": 3,
+        "type_id": 4,
+        "story_id": 18
+    },
+    {
+        "id": 19,
+        "name": "Arpias",
+        "type_id": 5,
+        "story_id": 19
+    },
+    {
+        "id": 20,
+        "name": "Centauros",
+        "type_id": 7,
+        "story_id": 20
+    },
+    {
+        "id": 21,
+        "name": "Pegaso",
+        "type_id": 6,
+        "story_id": 21
+    }
+]

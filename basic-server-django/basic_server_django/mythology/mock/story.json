@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "title": "El Nacimiento de Afrodita",
+        "content": "Afrodita, la diosa del amor y la belleza, nació de la espuma del mar cerca de la isla de Chipre. Según el mito, surgió plenamente formada de las aguas y fue recibida por las Horas, quienes la llevaron al Olimpo. Allí, se convirtió en una de las diosas más poderosas y adoradas, conocida por su capacidad de inspirar amor y deseo en dioses y mortales por igual."
+    },
+    {
+        "id": 2,
+        "title": "El Reino de Hades",
+        "content": "Hades es el dios del inframundo y gobierna sobre los muertos. Su reino, también conocido como Hades, es un lugar sombrío donde las almas de los difuntos residen eternamente. Aunque es una figura temida, Hades no es malvado; simplemente cumple su deber de mantener el equilibrio entre la vida y la muerte. Secuestró a Perséfone, hija de Deméter, para que fuera su esposa, lo que provocó el cambio de las estaciones."
+    },
+    {
+        "id": 3,
+        "title": "Artemisa, la Diosa Cazadora",
+        "content": "Artemisa, hermana gemela de Apolo, es la diosa de la caza, los animales salvajes y la luna. Es una virgen eterna que protege a las mujeres y a los niños. Artemisa es conocida por su habilidad con el arco y sus acompañantes caninos, y castiga severamente a aquellos que la ofenden o dañan la naturaleza que ella cuida."
+    },
+    {
+        "id": 4,
+        "title": "Crono y la Era de los Titanes",
+        "content": "Crono, el titán del tiempo, gobernó el cosmos durante la Edad de Oro después de derrocar a su padre Urano. Para evitar ser derrocado por sus propios hijos, Crono los devoraba al nacer. Sin embargo, su esposa Rea escondió a Zeus, quien más tarde liberó a sus hermanos y derrotó a Crono, marcando el fin del reinado de los titanes y el inicio de la era de los dioses olímpicos."
+    },
+    {
+        "id": 5,
+        "title": "Deméter y el Misterio de Eleusis",
+        "content": "Deméter, la diosa de la agricultura y la fertilidad, es venerada por su control sobre las cosechas y su habilidad para nutrir la tierra. Su hija Perséfone fue secuestrada por Hades, lo que sumió a Deméter en una profunda tristeza, causando la infertilidad de la tierra. Finalmente, se permitió que Perséfone pasara parte del año con su madre, lo que trajo el cambio de las estaciones."
+    },
+    {
+        "id": 6,
+        "title": "Zeus, el Rey del Olimpo",
+        "content": "Zeus es el dios supremo del Olimpo y gobierna sobre todos los dioses y los humanos. Es conocido por su poder sobre los cielos y el trueno, así como por su intervención en los asuntos humanos y divinos. A pesar de ser el dios del orden y la justicia, su infidelidad y numerosos amoríos a menudo causaban conflictos tanto en el Olimpo como en la Tierra."
+    },
+    {
+        "id": 7,
+        "title": "Adonis, el Amante de Afrodita",
+        "content": "Adonis es un joven de increíble belleza, amado tanto por Afrodita como por Perséfone. Después de ser herido mortalmente por un jabalí durante una caza, Afrodita transformó su sangre en anémonas. En su honor, las estaciones de Adonis se celebran como un símbolo de renacimiento y el ciclo eterno de la vida y la muerte."
+    },
+    {
+        "id": 8,
+        "title": "Andrómeda y Perseo",
+        "content": "Andrómeda, hija de Cefeo y Casiopea, fue encadenada a una roca como sacrificio a un monstruo marino enviado por Poseidón. Perseo, tras haber matado a Medusa, rescató a Andrómeda usando la cabeza de Medusa para convertir al monstruo en piedra. Los dos se casaron y vivieron felices, siendo recordados como símbolos de valentía y amor."
+    },
+    {
+        "id": 9,
+        "title": "Aquiles, el Héroe de Troya",
+        "content": "Aquiles, hijo de Peleo y Tetis, fue un guerrero invencible en la Guerra de Troya, excepto por su talón, su único punto vulnerable. Su ira por la muerte de su amigo Patroclo lo llevó a matar a Héctor, el mayor campeón de Troya. Aquiles finalmente fue asesinado por una flecha dirigida a su talón, lanzada por Paris con la ayuda de Apolo."
+    },
+    {
+        "id": 10,
+        "title": "Dafne y Apolo",
+        "content": "Dafne, una ninfa de los ríos, fue perseguida por el dios Apolo, que estaba enamorado de ella. Para escapar de él, Dafne pidió ayuda a su padre, el río Peneo, quien la transformó en un laurel. Desde entonces, el laurel se convirtió en el árbol sagrado de Apolo, quien lleva siempre una corona de sus hojas."
+    },
+    {
+        "id": 11,
+        "title": "Los Doce Trabajos de Hércules",
+        "content": "Hércules, hijo de Zeus y Alcmena, fue condenado a realizar doce arduos trabajos como penitencia por haber matado a su familia en un arranque de locura inducido por Hera. Estas tareas, que incluían matar al león de Nemea y capturar al jabalí de Erimanto, demostraron su fuerza y valentía, y lo convirtieron en el más grande de los héroes griegos."
+    },
+    {
+        "id": 12,
+        "title": "Electra y la Venganza",
+        "content": "Electra, hija de Agamenón y Clitemnestra, anhelaba vengar la muerte de su padre, asesinado por su madre y su amante Egisto. Con la ayuda de su hermano Orestes, Electra logró vengar a su padre, matando a Clitemnestra y Egisto. Su historia es un testimonio de la justicia y la venganza en la mitología griega."
+    },
+    {
+        "id": 13,
+        "title": "Ícaro y el Vuelo Prohibido",
+        "content": "Ícaro, hijo del inventor Dédalo, intentó escapar del laberinto de Creta volando con alas hechas de cera y plumas. A pesar de las advertencias de su padre, voló demasiado cerca del sol, lo que provocó que la cera se derritiera y que Ícaro cayera al mar Egeo y muriera. Su historia es una advertencia sobre la arrogancia y la desobediencia."
+    },
+    {
+        "id": 14,
+        "title": "Edipo y el Enigma de la Esfinge",
+        "content": "Edipo, hijo de Layo y Yocasta, fue abandonado al nacer para evitar una profecía que decía que mataría a su padre y se casaría con su madre. Sin saber su verdadera identidad, Edipo mató a su padre y resolvió el enigma de la Esfinge, salvando Tebas y casándose con su madre. Cuando la verdad salió a la luz, Yocasta se suicidó y Edipo se cegó a sí mismo en desesperación."
+    },
+    {
+        "id": 15,
+        "title": "Odiseo y su Viaje de Regreso",
+        "content": "Odiseo, rey de Ítaca, enfrentó un arduo y largo viaje de regreso a casa tras la Guerra de Troya. Durante diez años, enfrentó numerosos desafíos, incluidos los cíclopes, sirenas y la ira de Poseidón. Con astucia y determinación, finalmente regresó a Ítaca, donde recuperó su reino y se reunió con su fiel esposa Penélope y su hijo Telémaco."
+    },
+    {
+        "id": 16,
+        "title": "Orestes y la Justicia de los Dioses",
+        "content": "Orestes, hijo de Agamenón y Clitemnestra, regresó a su hogar para vengar el asesinato de su padre, cometido por su madre y su amante Egisto. Con la ayuda de su hermana Electra, Orestes mató a ambos. Sin embargo, su matricidio lo condenó a ser perseguido por las Furias, hasta que fue absuelto en un juicio en Atenas, con la intervención de Atenea."
+    },
+    {
+        "id": 17,
+        "title": "Perseo y la Gorgona Medusa",
+        "content": "Perseo, hijo de Zeus y Dánae, fue encargado de matar a Medusa, una de las tres gorgonas cuyo cabello estaba hecho de serpientes y cuya mirada convertía a los hombres en piedra. Con la ayuda de los dioses, Perseo logró decapitar a Medusa y usar su cabeza como arma antes de entregársela a Atenea. Su heroísmo y valentía lo convirtieron en uno de los grandes héroes de la mitología griega."
+    },
+    {
+        "id": 18,
+        "title": "Tántalo y el Castigo Eterno",
+        "content": "Tántalo, un rey mortal favorecido por los dioses, fue condenado a un castigo eterno en el inframundo por ofender a los dioses. Su crimen fue robar la ambrosía y el néctar de los dioses y ofrecer a su hijo cocido como comida a los olímpicos. En el Tártaro, Tántalo sufre hambre y sed eternos, estando siempre cerca de agua y comida que nunca puede alcanzar."
+    },
+    {
+        "id": 19,
+        "title": "Las Arpías y los Vientos Furiosos",
+        "content": "Las Arpías, criaturas con cuerpo de ave y rostro de mujer, eran conocidas por robar la comida y llevarse las almas al inframundo. Eran servidoras de Zeus y castigaban a los malhechores, aterrorizando a todos con su apariencia y sus chillidos. Su historia es una muestra del temor y el respeto que los antiguos griegos tenían por las fuerzas sobrenaturales."
+    },
+    {
+        "id": 20,
+        "title": "Los Centauros y la Batalla de los Lapitas",
+        "content": "Los centauros, criaturas mitad hombre y mitad caballo, son conocidos tanto por su sabiduría como por su salvajismo. En la batalla de los Lapitas, un grupo de centauros se embriagó y trató de secuestrar a las mujeres lapitas durante una boda, lo que llevó a un violento enfrentamiento. Esta guerra reflejó el conflicto entre la civilización y la barbarie en la mitología griega."
+    },
+    {
+        "id": 21,
+        "title": "Pegaso, el Caballo Alado",
+        "content": "Pegaso, el caballo alado nacido de la sangre de Medusa, es una criatura mítica de gran belleza y fuerza. Ayudó a Belerofonte en sus hazañas, como vencer a la Quimera. Tras la muerte de Belerofonte, Pegaso ascendió al cielo y se convirtió en una constelación. Su historia simboliza la libertad y el poder del vuelo divino."
+    }
+]

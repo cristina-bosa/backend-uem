@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Dios/Diosa"
+    },
+    {
+        "id": 2,
+        "name": "Espíritus"
+    },
+    {
+        "id": 3,
+        "name": "Ninfas"
+    },
+    {
+        "id": 4,
+        "name": "Héroes/heroínas"
+    },
+    {
+        "id": 5,
+        "name": "Monstruos"
+    },
+    {
+        "id": 6,
+        "name": "Prodigios"
+    },
+    {
+        "id": 7,
+        "name": "Criaturas híbridas"
+    }
+]

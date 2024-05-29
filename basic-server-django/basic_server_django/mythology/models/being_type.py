@@ -2,9 +2,7 @@ from django.db import models
 
 
 class BeingType(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    description = models.TextField(default="", blank=True)    
+    name = models.CharField(max_length=100)    
 
     class Meta:
         ordering = ["name"]

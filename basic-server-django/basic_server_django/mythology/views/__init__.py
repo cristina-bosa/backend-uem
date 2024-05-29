@@ -5,8 +5,8 @@ from .being_type import (
     BeingTypeDestroy,
 )
 from .being import BeingCreate, BeingList, BeingRetrieveUpdate, BeingDestroy
-from .story import StoryView
-
+from .story import StoryListCreate, StoryRetrieveUpdateDestroy
+from .house import HouseListCreate, HouseRetrieveUpdateDestroy
 __all__ = [
     "BeingTypeCreate",
     "BeingTypeList",
@@ -16,5 +16,9 @@ __all__ = [
     "BeingList",
     "BeingRetrieveUpdate",
     "BeingDestroy",
-    "StoryView",
+    "StoryListCreate",
+    "StoryRetrieveUpdateDestroy",
+    "HouseListCreate",
+    "HouseRetrieveUpdateDestroy",
+    
 ]
