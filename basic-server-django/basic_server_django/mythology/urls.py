@@ -11,6 +11,8 @@ from .views import (
     StoryListCreate,
     StoryRetrieveUpdateDestroy,
     StoryFilter,
+    HouseListCreate,
+    HouseRetrieveUpdateDestroy,
 )
 
 urlpatterns = [
@@ -37,4 +39,10 @@ urlpatterns = [
         name="story_retrieve_update_destroy",
     ),
     path("story-filter", StoryFilter.as_view(), name="story_filter"),
+    path("house", HouseListCreate.as_view(), name="house_list_create"),
+    path(
+        "house/<int:pk>",
+        HouseRetrieveUpdateDestroy.as_view(),
+        name="house_retrieve_update_destroy",
+    ),
 ]
