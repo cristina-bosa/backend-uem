@@ -132,7 +132,7 @@ POST /api/being_type
 #### Consultar todos los tipos de seres
 
 ```http
-GET /api/being_type
+GET /api/being-type
 ```
 
 | Parameter | Type | Description |
@@ -147,7 +147,7 @@ GET /api/being_type
 #### Consultar un tipo de ser
 
 ```http
-GET /api/being_type/:id
+GET /api/being-type/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -163,7 +163,7 @@ GET /api/being_type/:id
 #### Editar un Tipo de ser
 
 ```http
-PUT /api/being_type/:id
+PUT /api/being-type/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -183,7 +183,7 @@ PUT /api/being_type/:id
 #### Borrar un tipo de ser
 
 ```http
-DELETE /api/being_type/:id
+DELETE /api/being-type/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -380,13 +380,13 @@ DELETE /api/being/:id
 GET /api/story-filter/
 ```
 
-| Body | Type  | Description      |
-| :-------- | :---- | :--------------- |
-| `house`      | `string` | Nombre de la casa |
-| `being_type`      | `string` | Nombre del tipo de ser |
-| `being`      | `string` | Nombre del ser |
+| Body         | Type     | Description            |
+| :----------- | :------- | :--------------------- |
+| `house`      | `string` | Nombre de la casa      |
+| `being_type` | `string` | Nombre del tipo de ser |
+| `being`      | `string` | Nombre del ser         |
 
 | Status | Description                                                  |
 | :----- | :----------------------------------------------------------- |
-| 200    | La entidad fue encontrada                       |
+| 200    | La entidad fue encontrada                                    |
 | 500    | Se ha producido un error en el servidor durante el procesado |
