@@ -1,4 +1,4 @@
-# Mythology
+# api
 
 Está pequeña API está orientada a la mitología.
 
@@ -31,7 +31,7 @@ Está pequeña API está orientada a la mitología.
 #### Crear una casa
 
 ```http
-POST /mythology/house
+POST /api/house
 ```
 
 | Body   | Type     | Description       |
@@ -47,7 +47,7 @@ POST /mythology/house
 #### Consultar todas las casas
 
 ```http
-GET /mythology/house
+GET /api/house
 ```
 
 | Parameter | Type | Description |
@@ -62,7 +62,7 @@ GET /mythology/house
 #### Consultar una casa
 
 ```http
-GET /mythology/house/:id
+GET /api/house/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -78,7 +78,7 @@ GET /mythology/house/:id
 #### Editar una casa
 
 ```http
-PUT /mythology/house/:id
+PUT /api/house/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -98,7 +98,7 @@ PUT /mythology/house/:id
 #### Borrar una casa
 
 ```http
-DELETE /mythology/house/:id
+DELETE /api/house/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -116,7 +116,7 @@ DELETE /mythology/house/:id
 #### Crear un tipo de ser
 
 ```http
-POST /mythology/being_type
+POST /api/being_type
 ```
 
 | BODY   | Type     | Description            |
@@ -132,7 +132,7 @@ POST /mythology/being_type
 #### Consultar todos los tipos de seres
 
 ```http
-GET /mythology/being_type
+GET /api/being_type
 ```
 
 | Parameter | Type | Description |
@@ -147,7 +147,7 @@ GET /mythology/being_type
 #### Consultar un tipo de ser
 
 ```http
-GET /mythology/being_type/:id
+GET /api/being_type/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -163,7 +163,7 @@ GET /mythology/being_type/:id
 #### Editar un Tipo de ser
 
 ```http
-PUT /mythology/being_type/:id
+PUT /api/being_type/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -183,7 +183,7 @@ PUT /mythology/being_type/:id
 #### Borrar un tipo de ser
 
 ```http
-DELETE /mythology/being_type/:id
+DELETE /api/being_type/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -201,7 +201,7 @@ DELETE /mythology/being_type/:id
 #### Crear una historia
 
 ```http
-POST /mythology/story
+POST /api/story
 ```
 
 | Body      | Type     | Description              |
@@ -218,7 +218,7 @@ POST /mythology/story
 #### Consultar todas las historias
 
 ```http
-GET /mythology/story
+GET /api/story
 ```
 
 | Parameter | Type | Description |
@@ -233,7 +233,7 @@ GET /mythology/story
 #### Consultar una historia
 
 ```http
-GET /mythology/story/:id
+GET /api/story/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -249,7 +249,7 @@ GET /mythology/story/:id
 #### Editar una historia
 
 ```http
-PUT /mythology/story/:id
+PUT /api/story/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -270,7 +270,7 @@ PUT /mythology/story/:id
 #### Borrar una historia
 
 ```http
-DELETE /mythology/story/:id
+DELETE /api/story/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -288,7 +288,7 @@ DELETE /mythology/story/:id
 #### Crear un ser
 
 ```http
-POST /mythology/being
+POST /api/being
 ```
 
 | Body       | Type     | Description                           |
@@ -307,7 +307,7 @@ POST /mythology/being
 #### Consultar todas las historias
 
 ```http
-GET /mythology/being
+GET /api/being
 ```
 
 | Parameter | Type | Description |
@@ -322,7 +322,7 @@ GET /mythology/being
 #### Consultar una historia
 
 ```http
-GET /mythology/being/:id
+GET /api/being/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -338,7 +338,7 @@ GET /mythology/being/:id
 #### Editar una historia
 
 ```http
-PUT /mythology/being/:id
+PUT /api/being/:id
 ```
 
 | Parameter | Type  | Description      |
@@ -361,7 +361,7 @@ PUT /mythology/being/:id
 #### Borrar una historia
 
 ```http
-DELETE /mythology/being/:id
+DELETE /api/being/:id
 ```
 
 | Parameter | Type  | Description      |
