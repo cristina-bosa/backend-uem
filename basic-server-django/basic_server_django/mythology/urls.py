@@ -10,6 +10,7 @@ from .views import (
     BeingDestroy,
     StoryListCreate,
     StoryRetrieveUpdateDestroy,
+    StoryFilter,
 )
 
 urlpatterns = [
@@ -35,4 +36,5 @@ urlpatterns = [
         StoryRetrieveUpdateDestroy.as_view(),
         name="story_retrieve_update_destroy",
     ),
+    path("story-filter", StoryFilter.as_view(), name="story_filter"),
 ]

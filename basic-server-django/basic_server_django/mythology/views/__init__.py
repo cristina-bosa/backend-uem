@@ -7,6 +7,8 @@ from .being_type import (
 from .being import BeingCreate, BeingList, BeingRetrieveUpdate, BeingDestroy
 from .story import StoryListCreate, StoryRetrieveUpdateDestroy
 from .house import HouseListCreate, HouseRetrieveUpdateDestroy
+from .story_filter import StoryFilter
+
 __all__ = [
     "BeingTypeCreate",
     "BeingTypeList",
@@ -20,5 +22,5 @@ __all__ = [
     "StoryRetrieveUpdateDestroy",
     "HouseListCreate",
     "HouseRetrieveUpdateDestroy",
-    
+    "StoryFilter",
 ]

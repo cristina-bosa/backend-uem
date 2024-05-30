@@ -1,3 +1,4 @@
+from mythology.models import House, BeingType, Being, Story
 from django.core.management.base import BaseCommand, CommandError
 import json
 
@@ -15,7 +16,6 @@ class Command(BaseCommand):
         being = json.load(open("mythology/mock/being.json"))
         story = json.load(open("mythology/mock/story.json", encoding="utf-8"))
         try:
-            from mythology.models import House, BeingType, Being, Story
 
             for house_data in house:
                 house = House.objects.create(**house_data)
