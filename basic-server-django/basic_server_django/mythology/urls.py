@@ -1,37 +1,27 @@
 from django.urls import path
 from .views import (
-    BeingTypeCreate,
-    BeingTypeList,
-    BeingTypeRetrieveUpdate,
-    BeingTypeDestroy,
-    BeingCreate,
-    BeingList,
-    BeingRetrieveUpdate,
-    BeingDestroy,
+    BeingTypeListCreate,
+    BeingTypeRetrieveUpdateDestroy,
+
+
+    BeingListCreate,
+    BeingRetriveUpdateDestroy,
+
     StoryListCreate,
     StoryRetrieveUpdateDestroy,
     StoryFilter,
+    
     HouseListCreate,
     HouseRetrieveUpdateDestroy,
 )
 
 urlpatterns = [
-    path("being-type", BeingTypeList.as_view(), name="being_type_list"),
-    path("being-type", BeingTypeCreate.as_view(), name="being_type_create"),
-    path(
-        "being-type/<int:pk>",
-        BeingTypeRetrieveUpdate.as_view(),
-        name="being_type_retrieve_update",
-    ),
-    path(
-        "being-type/<int:pk>",
-        BeingTypeDestroy.as_view(),
-        name="being_type_destroy",
-    ),
-    path("being", BeingList.as_view(), name="being_list"),
-    path("being", BeingCreate.as_view(), name="being_create"),
-    path("being/<int:pk>", BeingRetrieveUpdate.as_view(), name="being_retrieve_update"),
-    path("being/<int:pk>", BeingDestroy.as_view(), name="being_destroy"),
+    path("being-type", BeingTypeListCreate.as_view(), name="being_type_list_create"),
+    path("being-type/<int:pk>", BeingTypeRetrieveUpdateDestroy.as_view(), name="being_type_retrieve_update_destroy"),
+
+    path("being/", BeingListCreate.as_view(), name="being_list_create"),
+    path("being/<int:pk>", BeingRetriveUpdateDestroy.as_view(), name="being_retrieve_update_destroy"),
+
     path("story", StoryListCreate.as_view(), name="story_list_create"),
     path(
         "story/<int:pk>",
