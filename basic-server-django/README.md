@@ -373,3 +373,20 @@ DELETE /api/being/:id
 | 204    | La entidad fue eliminada correctamente                       |
 | 404    | La entidad no fue encontrada                                 |
 | 500    | Se ha producido un error en el servidor durante el procesado |
+
+### Filtrar historias
+
+```http
+GET /api/story-filter/
+```
+
+| Body | Type  | Description      |
+| :-------- | :---- | :--------------- |
+| `house`      | `string` | Nombre de la casa |
+| `being_type`      | `string` | Nombre del tipo de ser |
+| `being`      | `string` | Nombre del ser |
+
+| Status | Description                                                  |
+| :----- | :----------------------------------------------------------- |
+| 200    | La entidad fue encontrada                       |
+| 500    | Se ha producido un error en el servidor durante el procesado |
