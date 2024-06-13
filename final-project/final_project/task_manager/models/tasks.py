@@ -6,7 +6,7 @@ from .status import TaskStatus
 class Tasks(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    status = models.CharField(max_length=255, choices = TaskStatus.choices, default = TaskStatus.TODO)
+    status = models.CharField(max_length=255, choices = TaskStatus.choices, default = TaskStatus.TODO, blank = True)
     start_date = models.DateTimeField(null = True)
     end_date = models.DateTimeField(null = True)
     created_at = models.DateTimeField(auto_now_add=True)

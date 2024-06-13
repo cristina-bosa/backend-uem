@@ -6,7 +6,8 @@ from .status import ProjectStatus
 class Projects(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    status = models.CharField(max_length=255, choices = ProjectStatus.choices, default = ProjectStatus.ACTIVE)
+    status = models.CharField(max_length=255, choices = ProjectStatus.choices, default = ProjectStatus.ACTIVE,
+                              blank = True)
     start_date = models.DateTimeField(null = True)
     end_date = models.DateTimeField(null = True)
     created_at = models.DateTimeField(auto_now_add=True)
