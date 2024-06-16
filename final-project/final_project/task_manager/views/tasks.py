@@ -30,7 +30,10 @@ class TaskViewset(viewsets.ModelViewSet):
             serializer = self.serializer_class(data = request.data)
             if serializer.is_valid():
                 serializer.save()
+                users = Users.objects.filter(id__in = request.data['users'])
                 TelegramBot().send_message(request.user, f'La tarea {serializer.data["name"]} se ha creado')
+                for user in users:
+                    TelegramBot().send_message(user, f'La tarea {serializer.data["name"]} se te ha añadido')
                 return Response(serializer.data, status = HTTPStatus.CREATED)
             else:
                 return Response(serializer.errors, status = HTTPStatus.BAD_REQUEST)

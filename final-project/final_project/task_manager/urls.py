@@ -8,7 +8,7 @@ from .views.tasks import TaskViewset
 router = routers.DefaultRouter()
 
 router.register('comment', CommentViewset, basename = 'comment')
-router.register('project', ProjectViewset, basename = 'project')
+router.register('projects', ProjectViewset, basename = 'project')
 router.register('task', TaskViewset, basename = 'task')
 router.register('auth', AuthViewset, basename = 'auth')
 
