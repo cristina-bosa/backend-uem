@@ -25,17 +25,6 @@ class CommentViewset(viewsets.ModelViewSet):
                 TelegramBot().send_message(request.user, f'El comentario {serializer.data["comment"]} se ha creado')
                 return Response(serializer.data, status = HTTPStatus.CREATED)
             else:
-                return Response(status = HTTPStatus.BAD_REQUEST)
+                return Response(serializer.errors, status = HTTPStatus.BAD_REQUEST)
         except Exception as e:
             return Response(status = HTTPStatus.BAD_REQUEST)
-
-    @action(detail = False, methods = ['get'], url_path = 'task', permission_classes = [IsAuthenticated])
-    def get_comments_task(self, request):
-        try:
-            data = request.data
-            task = data['task']
-            comments = Comments.objects.filter(task = task)
-            serializer = CommentSerializer(comments, many = True)
-            return Response(serializer.data)
-        except Comments.DoesNotExist:
-            return Response(status = HTTPStatus.NOT_FOUND)

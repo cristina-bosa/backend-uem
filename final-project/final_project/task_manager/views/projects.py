@@ -27,7 +27,7 @@ class ProjectViewset(viewsets.ModelViewSet):
                 TelegramBot().send_message(request.user, f'El proyecto - {serializer.data["name"]} se ha creado')
                 return Response(serializer.data, status = HTTPStatus.CREATED)
             else:
-                return Response(status = HTTPStatus.BAD_REQUEST)
+                return Response(serializer.errors, status = HTTPStatus.BAD_REQUEST)
         except Exception as e:
             return Response(status = HTTPStatus.BAD_REQUEST)
 
@@ -51,8 +51,8 @@ class ProjectViewset(viewsets.ModelViewSet):
         except Projects.DoesNotExist:
             return Response(status = HTTPStatus.NOT_FOUND)
 
-    @action(detail = True, methods = ['post'], url_path = 'tasks', permission_classes = [IsAuthenticated])
-    def get_tasks(self, pk):
+    @action(detail = True, methods = ['get'], url_path = 'tasks', permission_classes = [IsAuthenticated])
+    def get_tasks(self, request, pk):
         try:
             project = self.queryset.get(pk = pk)
             tasks = project.tasks_set.all() # la magia que hace django por debajo. te relaciona las tablas.

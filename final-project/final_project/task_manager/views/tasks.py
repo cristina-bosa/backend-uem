@@ -6,7 +6,9 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from task_manager.models import Users
+from task_manager.models.comments import Comments
 from task_manager.models.tasks import Tasks
+from task_manager.serializers.comments import CommentSerializer
 from task_manager.serializers.tasks import TaskSerializer
 from task_manager.utils.send_notifications import TelegramBot
 
@@ -31,7 +33,7 @@ class TaskViewset(viewsets.ModelViewSet):
                 TelegramBot().send_message(request.user, f'La tarea {serializer.data["name"]} se ha creado')
                 return Response(serializer.data, status = HTTPStatus.CREATED)
             else:
-                return Response(status = HTTPStatus.BAD_REQUEST)
+                return Response(serializer.errors, status = HTTPStatus.BAD_REQUEST)
         except Exception as e:
             return Response(status = HTTPStatus.BAD_REQUEST)
 
@@ -60,8 +62,8 @@ class TaskViewset(viewsets.ModelViewSet):
         try:
             task = self.queryset.get(pk = pk)
             task.users.add(request.data['user'])
-            users = Users.objects.filter(id__in = request.data['user'])
             for user in users:
+                task.users.add(user)
                 TelegramBot().send_message(user, f'El usuario {request.user.username} te ha asignado la tarea {task.name}')
             return Response({'message': 'Users added successfully'}, status = HTTPStatus.ACCEPTED)
         except Tasks.DoesNotExist:
@@ -72,9 +74,9 @@ class TaskViewset(viewsets.ModelViewSet):
     def delete_user_task(self, request, pk):
         try:
             task = self.queryset.get(pk = pk)
-            task.users.remove(request.data['user'])
             users = Users.objects.filter(id__in = request.data['user'])
             for user in users:
+                task.users.remove(user)
                 TelegramBot().send_message(user, f'El usuario {request.user.username} te ha eliminado la tarea'
                                                  f' {task.name}')
             return Response({'message': 'Users removed successfully'}, status = HTTPStatus.ACCEPTED)
@@ -90,5 +92,12 @@ class TaskViewset(viewsets.ModelViewSet):
         except Tasks.DoesNotExist:
             return Response(status = HTTPStatus.NOT_FOUND)
 
-
-
+    @action(detail = True, methods = ['get'], url_path = 'comments', permission_classes = [IsAuthenticated])
+    def get_comments_task(self, request, pk):
+        try:
+            task = self.queryset.get(pk = pk)
+            comments = task.comments_set.all()
+            serializer = CommentSerializer(comments, many = True)
+            return Response(serializer.data)
+        except Comments.DoesNotExist:
+            return Response(status = HTTPStatus.NOT_FOUND)

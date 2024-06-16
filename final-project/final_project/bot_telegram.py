@@ -53,13 +53,9 @@ async def id_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
 def main() -> None:
     """Start the bot."""
-    # Create the Application and pass it your bot's token.
     application = Application.builder().token(TOKEN).build()
-    # on different commands - answer in Telegram
     application.add_handler(CommandHandler("id", id_command))
     application.add_handler(CommandHandler("start", start))
-
-    # Run the bot until the user presses Ctrl-C
     application.run_polling(allowed_updates = Update.ALL_TYPES)
 
 
