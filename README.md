@@ -26,4 +26,4 @@ Se ha creado una API básica de mitología bajo el framework de django.
 
 ## Final project
 
-...
+Sistema de gestión de proyectos y tareas en python con envio de notificaciones a un bot de telegram.
