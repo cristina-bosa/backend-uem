@@ -6,15 +6,15 @@ class Recipes (models.Model):
     instructions = models.TextField()
     time = models.TimeField()
     difficulty = models.IntegerField()
-    owner = models.ForeignKey('Users', on_delete=models.CASCADE)
+    owner = models.ForeignKey('authentication.Users', on_delete=models.CASCADE)
     category = models.ForeignKey('Categories', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['name']
-        verbose_name = 'Recipe'
-        verbose_name_plural = 'Recipes'
+        verbose_name = 'recipe'
+        verbose_name_plural = 'recipes'
 
     def __str__(self):
         return self.name

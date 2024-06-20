@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'authentication',
     'meals'
 ]
 
@@ -140,7 +141,7 @@ REST_FRAMEWORK = {
     }
 
 AUTH_USER_MODEL = (
-    "meals.User"  # Variable para cambiar el modelo usado para la autenticacion
+    "authentication.Users"  # Variable para cambiar el modelo usado para la autenticacion
 )
 
 AUTHENTICATION_BACKENDS = ("django.contrib.auth.backends.ModelBackend",)
