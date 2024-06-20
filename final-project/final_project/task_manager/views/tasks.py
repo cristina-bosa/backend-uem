@@ -64,7 +64,7 @@ class TaskViewset(viewsets.ModelViewSet):
     def add_user_task(self, request, pk):
         try:
             task = self.queryset.get(pk = pk)
-            task.users.add(request.data['user'])
+            users = request.data['users']
             for user in users:
                 task.users.add(user)
                 TelegramBot().send_message(user, f'El usuario {request.user.username} te ha asignado la tarea {task.name}')
