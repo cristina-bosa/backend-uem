@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from meals.urls import router as meals_router
+from authentication.urls import router as auth_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/meals', include(meals_router.urls)),
-#    path('api/auth', include('authentication.urls')),
+    path('api/meals/', include(meals_router)),
+    path('api/auth/', include(auth_router)),
             ]
 urlpatterns += meals_router.urlpatterns
