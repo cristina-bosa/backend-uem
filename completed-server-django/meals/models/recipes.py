@@ -18,3 +18,7 @@ class Recipes (models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def ingredients(self):
+        return self.recipesingredients_set.all()

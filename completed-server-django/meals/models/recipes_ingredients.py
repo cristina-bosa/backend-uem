@@ -10,6 +10,11 @@ class RecipesIngredients(models.Model):
         ordering = ['recipe']
         verbose_name = 'recipe_ingredient'
         verbose_name_plural = 'recipes_ingredients'
+        unique_together = ['recipe', 'ingredient']
 
     def __str__(self):
         return f'{self.recipe.name} - {self.ingredient.name}'
+
+    @property
+    def name(self):
+        return self.ingredient.name
