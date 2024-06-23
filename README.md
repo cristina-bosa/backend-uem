@@ -22,7 +22,7 @@ Se ha creado una API básica de mitología bajo el framework de django.
 
 ## Completed server django
 
-...
+API básica bajo el framework de django.
 
 ## Final project
 
