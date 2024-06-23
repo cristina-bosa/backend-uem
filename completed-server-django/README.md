@@ -11,12 +11,12 @@ Una API sencilla para gestionar recetas de cocina. Hay tres tipos de usuarios: l
 ## Installation
 
 1. Clonar repositorio `git clone https://github.com/cristina-bosa/backend-uem`
-2. cd `git completed-server-django`
+2. Cd `completed-server-django`
 3. Crear el entorno virtual: `python -m venv env`.
 4. Activar el entorno virtual: `source env/bin/activate` (for Unix-based systems) or `env\Scripts\activate` (for Windows).
 5. Instalar las dependencias: `pip install -r requirements.txt`.
 6. Crear a DB in PostgreSQL
-7. Configurar esa BD en el settings del servidor.
+7. Configurar esa BD en el settings del servidor en la variable ```DATABASES```
 8. Crear las migraciones: `python manage.py makemigrations`.
 9. Lanzar las migraciones: `python manage.py migrate`.
 10. Comando para cargar la base de datos `python manage.py seeder`
@@ -82,10 +82,11 @@ POST /api/auth/login
 |:-----------|:------|:-----------------------------------------|
 | `username` | `str` | Username asociado al usuario del sistema |
 | `password` | `str` | Password asociada al usuario del sistema |
+
 ```json
 {
   "username": "test",
-  "password": "test",
+  "password": "test"
 }
 ```
 
@@ -126,6 +127,7 @@ POST /api/recipes/
 | `difficulty` | `int` | Dificultad de la receta |
 | `owner` | `int` | Dueño de la receta |
 | `category` | `int` | Categoria de la receta |
+
 ```json
 {
   "name": "Gyozas",
@@ -291,3 +293,4 @@ DELETE /api/categories/:id
 ```
 
 ### Ratings
+El rating se ha implementado de forma que un usuario puede darle un rating a una receta.

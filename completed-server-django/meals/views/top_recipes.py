@@ -17,5 +17,5 @@ class TopRecipesView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        top_recipes = Recipes.objects.annotate(rating_value=Avg('rating__value')).order_by('rating_value')
+        top_recipes = Recipes.objects.annotate(rating_value=Avg('rating__value')).order_by('-rating_value')
         return Response(RecipesSerializers(top_recipes, many=True).data, status=HTTPStatus.OK)
